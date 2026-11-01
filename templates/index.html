@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RedTutor IA</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='6' r='4' fill='%23c8102e'/%3E%3Ccircle cx='6' cy='25' r='4' fill='%23c8102e'/%3E%3Ccircle cx='26' cy='25' r='4' fill='%23c8102e'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="6" r="3.2"/><circle cx="6" cy="25" r="3.2"/><circle cx="26" cy="25" r="3.2"/>
+        <path d="M16 9v7M16 16 7.8 22.6M16 16l8.2 6.6" fill="none" stroke-width="2"/>
+      </svg>
+      <div>
+        <h1>RedTutor IA</h1>
+        <p class="subtitle">Tutor local de fundamentos de redes &middot; modelo <code>{{ redtutor_model }}</code></p>
+      </div>
+    </div>
+    <div class="actions">
+      <span id="status" class="status" title="Estado de Ollama">Verificando Ollama…</span>
+      <label class="toggle" title="Envía la pregunta al modelo base y a RedTutor">
+        <input type="checkbox" id="compareMode">
+        <span>Comparar con modelo base</span>
+      </label>
+      <button id="clearBtn" class="ghost" type="button">Limpiar</button>
+    </div>
+  </header>
+
+  <main id="chat" class="chat" aria-live="polite">
+    <section id="welcome" class="welcome">
+      <h2>¿Qué quieres aprender de redes hoy?</h2>
+      <p>Pregunta sobre modelo OSI y TCP/IP, direccionamiento IPv4, routers y switches, protocolos (TCP, UDP, DHCP, DNS, ICMP) o diagnóstico con <code>ping</code>, <code>ipconfig</code> y <code>tracert</code>.</p>
+      <div class="suggestions">
+        <button class="chip" type="button">¿Cuál es la diferencia entre un router y un switch?</button>
+        <button class="chip" type="button">¿Qué significa una dirección IPv4 con máscara /24?</button>
+        <button class="chip" type="button">¿Qué pasos debo seguir si un computador no tiene conexión a la red?</button>
+      </div>
+    </section>
+  </main>
+
+  <form id="composer" class="composer">
+    <textarea id="question" rows="1" maxlength="2000"
+      placeholder="Escribe tu pregunta de redes…" title="Enter envía · Shift+Enter nueva línea" required></textarea>
+    <button id="sendBtn" type="submit">Enviar</button>
+  </form>
+  <p class="footnote">Las respuestas se generan localmente con Ollama ({{ base_model }} personalizado). Verifica la información importante con tu docente.</p>
+
+  <script>
+    window.REDTUTOR = { model: "{{ redtutor_model }}", base: "{{ base_model }}" };
+  </script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
