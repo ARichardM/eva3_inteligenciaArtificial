@@ -38,6 +38,14 @@ class NetworkScopeTests(unittest.TestCase):
     def test_accepts_network_questions(self):
         self.assertTrue(app.is_network_question("¿Qué hace un router?"))
         self.assertTrue(app.is_network_question("¿Qué significa una máscara /24?"))
+        self.assertTrue(
+            app.is_network_question(
+                "¿Qué pasos debo seguir si un computador no tiene conexión a la red?"
+            )
+        )
+        self.assertTrue(
+            app.is_network_question("¿Cómo diagnostico una falla de conectividad de red?")
+        )
 
     def test_accepts_short_follow_up_to_network_question(self):
         history = [{"role": "user", "content": "¿Qué hace un router?"}]
