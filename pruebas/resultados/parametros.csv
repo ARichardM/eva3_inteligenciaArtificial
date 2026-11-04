@@ -1,0 +1,693 @@
+﻿experimento;parametro;valor;repeticion;segundos;tokens;tokens_por_seg;palabras;secciones_formato;tiene_codigo;tiene_tabla;menciona_254;diversidad_lexica;en_espanol;respuesta
+temperatura;temperature;0.1;1;10.0;500;63.1;262;2;False;True;True;0.389;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red (o prefijo) de 8 bits. La máscara se utiliza para separar la parte de red de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`.
+
+**Explicación:**
+
+* La dirección IP `192.168.1.100` se encuentra dentro de la red `192.168.1`.
+* La máscara `/24` indica que 24 bits (o 3 octetos) de la dirección IP son utilizados para identificar la red, mientras que los otros 8 bits (o 1 octeto) se utilizan para identificar el host.
+* En otras palabras, la dirección `192.168.1.100` se puede dividir en:
+ + La parte de red: `192.168.1`
+ + La parte de host: `100`
+
+**Consecuencias:**
+
+* Con una máscara /24, hay 256 direcciones IP posibles dentro de la red (2^8).
+* Solo 254 de estas direcciones son utilizables por los hosts, ya que se excluye la dirección de broadcast (`192.168.1.255`) y la dirección loopback (`127.0.0.1`).
+
+**Ejemplo práctico:**
+
+Supongamos que tenemos una red con la dirección IP `192.168.1.0/24`. Si queremos asignar direcciones IP a los hosts, podemos utilizar la siguiente tabla:
+
+| Dirección IP | Máscara /24 |
+| --- | --- |
+| 192.168.1.1 | 192.168.1.0/24 |
+| 192.168.1.2 | 192.168.1.0/24 |
+| ... | ... |
+| 192.168.1.254 | 192.168.1.0/24 |
+
+En este ejemplo, la dirección `192.168.1.100` se encuentra dentro de la red y es utilizada por un host específico. La máscara `/24` garantiza que esta dirección IP esté dentro de la red y no sea accesible desde fuera."
+temperatura;temperature;0.1;2;9.12;484;68.4;292;3;False;False;True;0.363;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red 8 bits. La máscara se utiliza para separar la parte de red (o subnet) de la parte de host en una red.
+
+**Ejemplo:** 192.168.1.100/24
+
+En este ejemplo, la dirección IP es 192.168.1.100 y la máscara es /24. La máscara /24 significa que se han reservado los primeros 8 bits (o 256 direcciones) de la dirección IP para la red.
+
+**Cálculo:** Para calcular el número de direcciones disponibles en una red con máscara /24, podemos utilizar la siguiente fórmula:
+
+Direcciones disponibles = 2^(32 - 24)
+
+= 2^8
+
+= 256
+
+Esto significa que hay 256 direcciones IP disponibles en esta red. Sin embargo, solo se utilizan 254 de ellas (ya que se reserva una dirección para el gateway y otra para el broadcast).
+
+**Importancia:** La máscara /24 es comúnmente utilizada porque permite dividir una red en múltiples subredes, cada una con su propia dirección IP. Esto facilita la administración y el mantenimiento de las redes.
+
+**Ejemplo práctico:** Imagina que tienes una red de 256 direcciones IP, y quieres dividirla en dos subredes: una para los empleados internos y otra para los clientes externos. Puedes asignar la dirección IP 192.168.1.0/24 a la red principal y luego utilizar máscaras /16 o /24 para las subredes internas y externas, respectivamente.
+
+**Resumen:**
+
+* Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red 8 bits.
+* La máscara se utiliza para separar la parte de red de la parte de host en una red.
+* La dirección IP 192.168.1.100/24 es un ejemplo de una dirección IPv4 con máscara /24, que permite dividir la red en múltiples subredes."
+temperatura;temperature;0.1;3;9.04;484;69.3;281;2;False;False;True;0.327;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red (o prefijo) de 8 bits. La máscara se utiliza para separar la parte de red de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`. En este caso, la dirección IP `192.168.1.100` es la dirección del host, y la máscara `/24` indica que la parte de red es `192.168.1.0` (255.255.255.0).
+
+**Cálculo:** La cantidad de direcciones IP disponibles en una red con una máscara /24 se calcula como sigue:
+
+* 256 direcciones posibles en cada octeto (0-255)
+* 2^8 = 256 direcciones posibles en la parte de red
+* 2^8 = 256 direcciones posibles en la parte de host
+* Total de direcciones disponibles: 256 x 256 = 65.536 direcciones
+
+**Consecuencias:** En una red con una máscara /24, solo hay 254 direcciones IP disponibles para el uso de los dispositivos conectados a la red (ya que se excluye la dirección `192.168.1.0` y la dirección broadcast `192.168.1.255`). Esto significa que cada dispositivo en la red debe tener una dirección IP única, excepto la dirección del gateway.
+
+**Ejemplo de uso:** En una red con una máscara /24, si se asigna la dirección IP `192.168.1.100` al dispositivo A y la dirección IP `192.168.1.200` al dispositivo B, entonces:
+
+* El dispositivo A tiene la dirección IP `192.168.1.100`
+* El dispositivo B tiene la dirección IP `192.168.1.200`
+* La dirección del gateway es `192.168.1.1`
+
+En este ejemplo, el dispositivo A y el dispositivo B tienen direcciones IP únicas dentro de la red, y la dirección del gateway se utiliza para comunicarse con Internet o con otras redes externas."
+temperatura;temperature;0.3;1;9.82;528;68.0;297;3;False;False;True;0.367;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits (octeto) y una máscara de red 8 bits (octeto). La máscara se utiliza para separar la parte de red de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`.
+
+**Explicación:**
+
+* La dirección IP `192.168.1.100` se encuentra dentro de la subred `192.168.1`.
+* La máscara `/24` significa que los primeros 24 bits (o 3 octetos) de la dirección IP son utilizados para identificar la red, mientras que los últimos 8 bits (1 octeto) se utilizan para identificar el host.
+* En este caso, `192.168.1` es la dirección de red y `100` es la dirección del host.
+
+**Consecuencias:**
+
+* La subred `192.168.1` tiene un número máximo de 256 direcciones IP (2^8).
+* Cada host en esta subred tiene una dirección IP única, desde `192.168.1.1` hasta `192.168.1.254`.
+* La dirección `192.168.1.255` es el broadcast de la subred y se utiliza para enviar mensajes a todos los dispositivos conectados a la red.
+
+**Ejemplo práctico:**
+
+Imagina que tienes una red de computadoras en tu casa, y quieres configurar las direcciones IP para cada computadora. Puedes asignar direcciones IP con máscara /24 de la siguiente manera:
+
+* `192.168.1.1` (dirección del router)
+* `192.168.1.2-192.168.1.254` (direcciones de los dispositivos conectados a la red)
+
+En este caso, cada dispositivo en la subred `192.168.1` tiene una dirección IP única y se puede comunicar entre sí sin necesidad de configurar direcciones IP adicionales.
+
+**Resumen:**
+
+Una dirección IPv4 con máscara /24 es una forma de separar la parte de red de la parte de host en una dirección IP, lo que permite identificar la subred y el host dentro de ella. Esto es útil para configurar redes y asignar direcciones IP a dispositivos conectados."
+temperatura;temperature;0.3;2;9.71;419;54.8;229;3;False;False;False;0.371;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red 8 bits. La máscara se utiliza para separar la parte de red (o subred) de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`. En este caso, la dirección IP 32 bits es `192.168.1.100`, y la máscara de red 8 bits es `/24`.
+
+**Máscaras de red:**
+
+*   `/8` (255.0.0.0): 256 direcciones posibles
+*   `/16` (255.255.0.0): 65,536 direcciones posibles
+*   `/24` (255.255.255.0): 256,768 direcciones posibles
+*   `/32` (255.255.255.255): 1 dirección posible
+
+**Consecuencias de una dirección IPv4 con máscara /24:**
+
+*   La dirección IP se utiliza para identificar la red o subred a la que pertenece el equipo.
+*   La parte de red se define por la primera 24 bits de la dirección IP (192.168 en este caso).
+*   La parte de host se define por los últimos 8 bits de la dirección IP (1 en este caso).
+
+**Ventajas:**
+
+*   Facilita la administración y el monitoreo de las redes.
+*   Permite a los equipos determinar su ubicación dentro de una red.
+
+**Desventajas:**
+
+*   Limita la cantidad de direcciones posibles en cada subred.
+
+En resumen, una dirección IPv4 con máscara /24 es una forma común de dividir una red en subredes y permite a los equipos identificarse y comunicarse dentro de esas redes."
+temperatura;temperature;0.3;3;8.89;414;60.5;223;2;False;False;True;0.395;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits (8 dígitos) y una máscara de red 32 bits (8 dígitos). La máscara se utiliza para definir la parte de red y la parte del host en la dirección IP.
+
+**Estructura:** Una dirección IPv4 con máscara /24 se puede representar como:
+
+`192.168.1.x/24`
+
+Donde `x` es un valor de 0 a 255 que representa la parte del host.
+
+**Máscara /24:** La máscara /24 significa que las primeras 24 bits (o 3 octetos) de la dirección IP son utilizadas para identificar la red. Los últimos 8 bits (1 octeto) se utilizan para identificar el host.
+
+**Ejemplo:** Si la dirección IP es `192.168.1.100/24`, entonces:
+
+* La parte de red es `192.168.1` (24 bits)
+* La parte del host es `100` (8 bits)
+
+**Consecuencias:** Una dirección IPv4 con máscara /24 significa que hay 256 direcciones IP posibles en la red, ya que cada uno de los 8 bits del host puede tener un valor de 0 a 255.
+
+**Ejemplo práctico:** En una red de oficinas, se asignan direcciones IP con máscara /24 para facilitar la administración y el acceso a recursos. Por ejemplo:
+
+* Dirección IP: `192.168.1.100`
+* Máscara /24: `192.168.1.0/24`
+
+En este caso, la red es `192.168.1`, y hay 256 direcciones IP posibles en la red, desde `192.168.1.1` hasta `192.168.1.254`."
+temperatura;temperature;0.7;1;8.96;403;58.3;228;2;False;False;True;0.487;True;"**Definición:** Una dirección IPv4 con máscara `/24` es un conjunto de direcciones IP que comparten la misma parte de red. La parte de red se determina mediante una máscara binaria de 32 bits, que se expresa en forma decimal como `/8`, `/16`, `/24`, `/32`.
+
+**Máscara /24:** En este caso específico, la máscara es `/24`. Esto significa que se conservan los primeros 24 bits (o 3 octetos) de la dirección IP para identificar la parte de red, y los últimos 8 bits (o 1 octeto) se eliminan.
+
+**Ejemplo:** La dirección IPv4 con máscara `/24` `192.168.1.100` se puede representar como:
+
+* Dirección IP: `192.168.1.100`
+* Máscara: `/24` (conservando los primeros 3 octetos y eliminando el último)
+* Parte de red: `192.168.1`
+* Parte de host: `100`
+
+**Importancia:** La máscara `/24` es importante porque define la cantidad de direcciones IP disponibles en una red. En este caso, hay 256 direcciones IP posibles (2^8), pero solo se conservan las primeras 254 direcciones (192.168.1.0 a 192.168.1.255). Esto significa que cada dispositivo conectado a la red puede tener una dirección IP única dentro de esa parte de red.
+
+**Ejemplo práctico:** Si una empresa tiene una red local con máscara `/24`, y cada departamento tiene una subred, los departamentos pueden asignar direcciones IP únicas dentro de sus respectivas subredes, mientras que las direcciones IP restantes se reservan para el acceso público o para otros fines."
+temperatura;temperature;0.7;2;9.28;468;64.8;271;3;False;False;False;0.336;True;"**Definición:** Una dirección IPv4 con máscara /24 es un ejemplo de cómo se divide la parte de red y la parte de host en una red IP.
+
+En una red IPv4, cada dispositivo tiene una dirección IP única. La dirección IP se compone de 32 bits (o 4 octetos) escritos como 8 dígitos de 0 a 9.
+
+La máscara /24 es un prefijo que indica la cantidad de bits utilizados para definir la parte de red (parte IP). En este caso, /24 significa que los primeros 24 bits de la dirección IP se utilizan para determinar la parte de red.
+
+**Ejemplo:**
+
+Dirección IPv4: `192.168.1.100`
+
+Máscara /24: `255.255.255.0`
+
+En este ejemplo, los primeros 24 bits (`192.168.1`) definen la parte de red, mientras que los últimos 8 bits (`00.100`) definen la parte de host.
+
+**¿Qué significa esta división?**
+
+* La parte de red (192.168.1) se utiliza para identificar la red a la que pertenece el dispositivo con la dirección IP.
+* La parte de host (100) se utiliza para identificar al dispositivo específico dentro de la red.
+
+**Cálculo del número de direcciones posible:**
+
+Con una máscara /24, hay 2^8 = 256 direcciones posibles en la parte de host. Esto significa que cada dispositivo dentro de la red puede tener una dirección IP única entre las direcciones `192.168.1.0` y `192.168.1.255`.
+
+**Resumen:**
+
+* Dirección IPv4 con máscara /24:
+	+ Parte de red (32 bits): `192.168.1`
+	+ Parte de host (8 bits): `00.100`
+* Cada dispositivo dentro de la red puede tener una dirección IP única entre las direcciones `192.168.1.0` y `192.168.1.255`.
+* Hay 256 direcciones posibles en la parte de host con una máscara /24."
+temperatura;temperature;0.7;3;8.21;402;65.3;234;3;True;False;True;0.423;True;"**Definición:** Una dirección IPv4 con máscara /24 se refiere a un conjunto de direcciones IP públicas que se encuentran dentro de la subred 192.168.1.
+
+La dirección IP completa es: 192.168.1.x, donde x va desde 0 hasta 255 (16 posibilidades).
+
+**Máscara /24:** La máscara /24 se refiere a una máscara de bits que se utiliza para definir la parte de la red y la parte del host. En este caso, la máscara es 255.255.255.0.
+
+La máscara /24 se define como:
+
+```
+0000.0000.0111.0000
+```
+
+En términos de bits, esto significa que solo los primeros 8 bits (192) de la dirección IP son parte de la red y los últimos 24 bits (0.1.x) son parte del host.
+
+**Consecuencias:** Esto significa que hay 256 direcciones posibles dentro de esta subred: 256 - 2 = 254 direcciones IP públicas para asignar a dispositivos en la red, más la dirección de broadcast (192.168.1.255) y la dirección de gateway (si se configura un router).
+
+**Ejemplo:** Si la dirección IP es 192.168.1.100 con una máscara /24, esto significa que:
+
+* La parte de red es 192.168.1.0
+* La parte del host es 00.10.00 (en decimal)
+* El dispositivo está asignado a esta subred
+
+**En resumen:** Una dirección IPv4 con máscara /24 se refiere a una subred que tiene una dirección IP pública y una parte de red definida por la máscara, mientras que la parte del host es flexible y puede variar."
+temperatura;temperature;1.0;1;9.43;496;67.1;247;2;False;False;True;0.425;True;"**Definición:**
+
+Una dirección IP de 32 bits expresada en forma decimal se divide en dos partes:
+
+*   **Parte de red:** los primeros 8 dígitos (64 bits).  
+*   **Parte de host:** los últimos 4 dígitos (8 bits).
+
+La parte de red está dada por la máscara binaria que representa el número de bits a considerar cuando se resolvió la dirección IP.
+
+Una dirección IPv4 con una máscara /24 significa:
+
+*   **Parte de red:** desde 0.0.0.0 hasta 255.255.255.255.
+*   **Parte de host**: desde 0 hasta 255.
+*   **Máscara binaria:** 11111111 (24) y 00000000 (8)
+
+El uso de esta máscara indica que la red tiene 256 direcciones (2^8), pero solo se asigna una parte de ella para el uso específico de cada usuario.
+
+**Ejemplo:**
+
+La dirección IP 192.168.1.100 con una máscara /24 significa que:
+
+*   La primera parte de la dirección es **192.168.1**, la red.
+*   La segunda parte es **0** (la parte del host).
+*   El puerto 80 (http) y el puerto 443 (https) están asignados a la dirección IP en la red, pero solo son utilizables desde dentro del mismo segmento de la red (192.168.1.XX).
+
+La tabla muestra el resultado de las dos direcciones.
+
+| Dirección | Máscara /24      |
+| :--------: | :-----------------: |
+| 192.168.1.0 | 255.255.255.0    |
+| 192.168.1.1 | 255.255.255.1     |
+| ...        | ...                |
+| 192.168.1.254 | 255.255.255.254   |
+| 192.168.1.255 | 255.255.255.255   |
+
+La dirección IP de los clientes en la red son:
+
+*   192.168.1.100
+*   192.168.1.101...
+*   ... 
+*   192.168.1.254"
+temperatura;temperature;1.0;2;11.79;579;59.4;317;3;False;False;True;0.435;True;"**Definición:**
+
+Una dirección IPv4 con máscara `/24` es una forma de segmentar un espacio de direcciones IP (Internet Protocol versión 4) en subredes más pequeñas y gestionables. Las máscaras son utilizadas para definir cuántos bits de la dirección IP están implicados en identificar el host específico dentro de una red.
+
+**Estructura:**
+
+Una dirección IPv4 con máscara `/24` se compone de 32 bits divididos en dos partes:
+
+* La primera parte corresponde a la subred (25 bits) y define dónde está ubicada la IP en el espacio de direcciones.
+* La segunda parte corresponde al host (7 bits) y identifica el dispositivo específico dentro de la subred.
+
+**Ejemplo:**
+
+Una dirección IPv4 con máscara `/24` puede ser:
+
+192.168.1.100/24
+
+En este ejemplo, los 25 bits de la primera parte (`192.168.1`) identifican la subred `192.168.1`, mientras que los 7 bits de la segunda parte (`00.100`) identifican el host específico `100`.
+
+**Proporción de direcciones:**
+
+La máscara `/24` define una subred con 256 direcciones IP posibles (2^8), de las cuales solo 254 están asignables para uso común. Esto se debe a que las dos últimas partes (`00`) no pueden ser utilizadas.
+
+**Conclusión:**
+
+En resumen, una dirección IPv4 con máscara `/24` es una forma efectiva de segmentar un espacio de direcciones IP y gestionar la asignación de direcciones en subredes. Esta configuración es comúnmente utilizada en redes domésticas y empresariales para mejorar la organización y el manejo de direcciones IP.
+
+**Ejemplo práctico:**
+
+Imagina que tienes una red doméstica con 16 dispositivos (computadoras, impresoras, etc.) que necesitan acceso a Internet. Puedes asignar direcciones IPv4 con máscara `/24` para cada dispositivo, lo que te permite gestionar fácilmente las direcciones IP de cada dispositivo dentro de la subred.
+
+* Dispositivo 1: 192.168.1.1/24
+* Dispositivo 2: 192.168.1.2/24
+* ...
+* Dispositivo 16: 192.168.1.16/24
+
+Cada dispositivo tiene una dirección IP única dentro de la subred `192.168.1`, mientras que la dirección `192.168.1.0` sirve como gateway para la red en sí."
+temperatura;temperature;1.0;3;10.08;494;61.6;298;2;False;False;False;0.44;True;"**Definición:** Una dirección IPv4 con máscara /24 es una dirección de red que se utiliza en Internet para identificar un equipo de una familia de direcciones.
+
+Una dirección IPv4 está compuesta por 32 bits divididos en cuatro grupos de cuatro dígitos separados por puntos (.) y se escriben en formato decimal. Una máscara /24 es una parte importante de esta dirección que ayuda a definir la red hacia la cual se envía el tráfico de Internet.
+
+**Cómo funciona:**
+
+1.  La primera parte del IP es la dirección IP, que puede ser cualquier número entre 0 y 255.
+2.  La segunda parte del IP es el prefijo de 24 bits (o máscara /24), que determina cuántos bits están reservados para la dirección de red versus la dirección host.
+3.  Cuando se envía un paquete a Internet, se utiliza esta máscara /24 para identificar cuál es la red destino.
+
+**Ejemplo:**
+
+Si tu IP tiene una dirección IP de `192.168.1.100` y una máscara `/24`, esto significa que tu equipo está en la siguiente red:
+
+`192.168.1.0/24`
+
+**Dirige a la siguiente cantidad de direcciones host:**
+
+(2^24) - 2 = 16777298 - 2 = 16777296
+
+Estas son las únicas direcciones IP que se pueden asignar a los dispositivos en tu red.
+
+Si quieres asignar una dirección `192.168.1.100` en esta red, la red no podría tener más de 16777297 dispositivos (192.168.1.0/24 - 192.168.1.99) con sus direcciones IP de manera que cada equipo tenga una dirección única.
+
+**Cómo determinar el rango de direcciones host:** 
+Si deseas calcular cuántos dispositivos se pueden agregar a la red sin afectar la integridad de tu red, solo usas la máscara /24. Por ejemplo:
+El rango es `(2 ^ 24) - 2 = 16777298`
+
+Entonces, en la misma red, podrías asignar `16777298` dispositivos de IP al dispositivo restante con dirección `192.168.1.100`."
+top_p;top_p;0.5;1;9.01;470;67.6;276;3;True;True;True;0.33;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits (octeto) y una máscara de red de 8 bits. La máscara se utiliza para separar la parte de red de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`.
+
+**Explicación:**
+
+* La dirección IP `192.168.1.100` se utiliza para identificar el equipo específico en la red.
+* La máscara `/24` indica que 24 bits de la dirección IP son utilizados para identificar la red, mientras que los otros 8 bits (o 32 bits en total) se utilizan para identificar el host específico dentro de la red.
+
+**Ejemplo con tabla:**
+
+| Bit | Dirección IP | Máscara |
+| --- | --- | --- |
+| 1-7 | 192.168.1.0 | 255.255.255.0 |
+| 8-31 | 100 | 000.000.000.000 |
+
+En este ejemplo, la dirección IP `192.168.1.100` se puede dividir en dos partes:
+
+* La parte de red: `192.168.1.0`
+* El host específico: `100`
+
+**Consecuencias:**
+
+* Con una máscara /24, hay 256 direcciones IP posibles en la red (2^8).
+* Solo se pueden asignar 254 direcciones IP a los hosts dentro de la red (ya que se reserva una dirección IP para el gateway y otra para el broadcast).
+
+**Ejemplo con ping:**
+
+Si ejecutamos `ping 192.168.1.100`, el paquete de tráfico se envía solo al host específico (`100`) dentro de la red, ya que la máscara `/24` indica que solo esta dirección IP es relevante para la red.
+
+En resumen, una dirección IPv4 con máscara /24 es una forma de identificar un equipo en una red, separando la parte de red de la parte de host."
+top_p;top_p;0.5;2;7.21;354;68.6;207;3;False;False;False;0.415;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red (o prefijo) de 8 bits. La máscara /24 se utiliza para dividir la red en subredes más pequeñas.
+
+**Ejemplo:** Si tenemos una dirección IP 192.168.1.100 con una máscara /24, esto significa que:
+
+* La parte de la dirección IP es 192.168.1 (32 bits)
+* La parte de la máscara es 255.255.255.0 (8 bits)
+
+La máscara /24 se puede representar como `000111111111` en formato binario, lo que significa que los primeros 3 octetos de la dirección IP son utilizados para identificar la subred y el último octeto es utilizado para identificar el host.
+
+**Consecuencias:**
+
+* La red tiene un número máximo de 256 host (2^8)
+* Cada host en la subred puede tener una dirección IP única
+* La dirección IP 192.168.1.100 se encuentra en la subred 192.168.1.0/24
+
+**Ejemplo práctico:** Si tenemos un router con una dirección IP de 192.168.1.1 y una máscara /24, podemos utilizar esta información para configurar el router y acceder a la red.
+
+En resumen, una dirección IPv4 con máscara /24 es una forma de dividir una red en subredes más pequeñas, lo que permite una mayor organización y gestión de la red."
+top_p;top_p;0.5;3;12.42;700;67.6;370;2;False;False;True;0.259;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red 8 bits. La máscara se utiliza para separar la parte de red (o subred) de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`.
+
+En este ejemplo, el número 192 es la dirección IP de la red, y los números 168, 1 y 100 son la dirección IP del host. La parte de red (192.168.1) se representa como un número binario de 8 bits (`0000 1100`), mientras que la parte de host (100) se representa como un número binario de 8 bits (`0110 0000`). La máscara /24 es `255.255.255.0`, lo que significa que solo los primeros 8 bits de la dirección IP son relevantes para la red.
+
+**Consecuencias:**
+
+*   El número total de direcciones IP en una subred con máscara /24 es 256 (2^8).
+*   Solo 254 de estas direcciones están disponibles para uso, ya que se reservan 2 direcciones (`0.0.0.0` y `255.255.255.255`) como broadcast y dirección de gateway.
+*   La dirección IP `192.168.1.100/24` pertenece a la subred `192.168.1`, y la dirección IP `192.168.1.1` es la dirección del gateway.
+
+**Ejemplo con direcciones IP en hexadecimal:**
+
+La dirección IP `192.168.1.100/24` se puede representar en hexadecimal como `C0A80001/24`. En este caso, el número de red es `C0A8`, y el número de host es `0001`.
+
+**Ejemplo con direcciones IP en decimal:**
+
+La dirección IP `192.168.1.100/24` se puede representar en decimal como `255.255.255.0`. En este caso, la parte de red es `255.255.255`, y la parte de host es `0`.
+
+**Ejemplo con direcciones IP en binario:**
+
+La dirección IP `192.168.1.100/24` se puede representar en binario como `11000000 11000011 00000001 00000010`. En este caso, el número de red es `11000000`, y el número de host es `00000010`.
+
+**Ejemplo con direcciones IP en octal:**
+
+La dirección IP `192.168.1.100/24` se puede representar en octal como `300 1200 01 010`. En este caso, el número de red es `300`, y el número de host es `01`.
+
+**Ejemplo con direcciones IP en hexadecimal:**
+
+La dirección IP `192.168.1.100/24` se puede representar en hexadecimal como `C0A80001/24`. En este caso, el número de red es `C0A8`, y el número de host es `0001`.
+
+**Ej"
+top_p;top_p;0.9;1;9.24;463;64.4;271;3;False;False;False;0.373;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits (4 números enteros entre 0 y 255) y una máscara de red 8 bits (1 número entero entre 0 y 255). La máscara define qué parte de la dirección IP corresponde a la red y qué parte corresponde al host.
+
+**Estructura:** Una dirección IPv4 con máscara /24 se puede representar como:
+
+`192.168.1.x/24`
+
+Donde:
+- `192.168.1.x` es la dirección IP del host (el número entero `x` varía entre 0 y 255).
+- `/24` es la máscara de red, que indica que las primeras 24 bits de la dirección IP corresponden a la red.
+
+**Máscara /24:** La máscara /24 se utiliza para definir una subred de tamaño 256 (2^8). Esto significa que hay 256 direcciones IP posibles en esta subred, desde `192.168.1.0` hasta `192.168.1.255`.
+
+**Ejemplo con direcciones IP:** Supongamos que la dirección IP es `192.168.1.10/24`. En este caso:
+- La primera 8 bits (`192`) corresponden a la red.
+- Las últimas 8 bits (`10`) corresponden al host.
+
+**Ventajas:** Utilizar una máscara /24 ofrece varias ventajas, como:
+- Facilita la administración de direcciones IP en redes pequeñas o medianas.
+- Ayuda a reducir el número de direcciones IP necesarias para una subred.
+- Facilita la configuración de routers y dispositivos de red.
+
+**Conclusión:** En resumen, una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits y una máscara de red 8 bits que define qué parte de la dirección IP corresponde a la red y qué parte corresponde al host. Esto permite administrar direcciones IP de manera eficiente en redes pequeñas o medianas."
+top_p;top_p;0.9;2;9.97;466;58.8;257;3;False;False;False;0.362;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP de 32 bits y una máscara de red de 24 bits. La máscara se utiliza para separar la parte de red (o subnet) de la parte de host en una red.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`.
+
+**Explicación:**
+
+* La dirección IP `192.168.1.100` se encuentra dentro de la red.
+* La máscara `/24` significa que 24 bits (o 32,5%) del total de 32 bits de la dirección IP son utilizados para definir la parte de red.
+* Con esta configuración, hay un total de `2^32 - 2 = 4.294.967.296` direcciones IP posibles en una red con máscara `/24`.
+* La parte de host se calcula como `2^8 - 2 = 255`, lo que significa que cada dispositivo en la red tiene un rango de direcciones IP de `192.168.1.0 a 192.168.1.255`.
+
+**Ejemplo práctico:** Si una empresa tiene una red con dirección IP `192.168.1.0/24` y asigna direcciones IP a sus dispositivos, los direcciones IP podrían ser:
+
+* `192.168.1.10`: Dispositivo 1
+* `192.168.1.20`: Dispositivo 2
+* `192.168.1.50`: Dispositivo 3
+
+En este ejemplo, la dirección IP `192.168.1.100` se encuentra en el rango de direcciones IP de la red y se utiliza para identificar un dispositivo específico.
+
+**Resumen:**
+
+Una dirección IPv4 con máscara /24 es una forma de dividir una red en subredes más pequeñas, permitiendo una mayor organización y asignación de direcciones IP a dispositivos. La máscara `/24` se utiliza para separar la parte de red de la parte de host en una red."
+top_p;top_p;0.9;3;11.82;526;53.8;326;3;False;False;False;0.294;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP de 32 bits y una máscara de red (o prefijo) de 8 bits. La máscara se utiliza para separar la parte de red de la parte de host en una dirección IP.
+
+**Estructura:** Una dirección IPv4 con máscara /24 se representa como:
+
+`dirección IP/máscara`
+
+Donde:
+
+* `dirección IP` es un número de 32 bits que identifica a un dispositivo en una red.
+* `/24` es la máscara de red, que indica la cantidad de bits que se utilizan para determinar la parte de red.
+
+**Máscara /24:** La máscara /24 significa que los primeros 24 bits de la dirección IP se utilizan para determinar la parte de red. Los últimos 8 bits se utilizan para determinar la parte de host.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 podría ser:
+
+`192.168.1.100/24`
+
+En este ejemplo, los primeros 24 bits (`192.168.1`) se utilizan para determinar la parte de red, y los últimos 8 bits (`00.100`) se utilizan para determinar la parte de host.
+
+**Consecuencias:** La máscara /24 significa que hay 256 direcciones IP posibles en una red (2^8), ya que cada uno de los 8 bits de la parte de host puede tener un valor de 0 a 255. Esto se conoce como ""subred"".
+
+**Ejemplo práctico:** Si tienes una dirección IPv4 con máscara /24, puedes utilizarla para conectarte a Internet o a otra red. Por ejemplo, si tu dirección IP es `192.168.1.100/24`, puedes utilizar la dirección `192.168.1.0` como gateway predeterminado para acceder a Internet.
+
+**Resumen:**
+
+* Una dirección IPv4 con máscara /24 es una combinación de una dirección IP y una máscara de red que se utiliza para separar la parte de red de la parte de host.
+* La máscara /24 significa que hay 256 direcciones IP posibles en una subred.
+* Esta estructura se utiliza comúnmente en redes de área local (LAN) y puede ser utilizada para conectarse a Internet o a otra red."
+repeat_penalty;repeat_penalty;1.0;1;10.05;501;62.6;317;3;False;False;True;0.278;True;"**Definición:** Una dirección IPv4 con máscara /24 se refiere a una dirección IP de 32 bits (4 octetos) que se ha dividido en dos partes: la parte de red y la parte de host.
+
+**Estructura:** Una dirección IPv4 con máscara /24 se puede representar de la siguiente manera:
+
+`192.168.1.0/24`
+
+Donde:
+
+* `192.168.1.0` es la dirección de red (la parte de la dirección que se utiliza para identificar la red a la que pertenece la dirección IP).
+* `24` es la longitud de la máscara (en bits).
+
+**Máscara /24:** La máscara /24 es una máscara de 24 bits que se utiliza para definir la parte de red de la dirección IP. Esta máscara se utiliza para determinar la cantidad de direcciones IP disponibles en una red.
+
+**Direcciones IP disponibles:** Con una máscara /24, se pueden asignar 256 direcciones IP (2^8) a una red, de las cuales solo 254 están disponibles para uso (ya que 2 se reservan para la dirección de red y la dirección broadcast).
+
+**Ejemplo:** Si una red tiene una dirección IP de `192.168.1.0/24`, las direcciones IP disponibles en esa red serían:
+
+* `192.168.1.1` a `192.168.1.254`
+
+**Broadcast:** La dirección broadcast de una red con una máscara /24 es la dirección IP que se utiliza para enviar un paquete de datos a todos los dispositivos conectados a la red. En este caso, la dirección broadcast sería `192.168.1.255`.
+
+**Host:** La parte de host de una dirección IP con máscara /24 es la dirección IP que se asigna a un dispositivo en la red. En este caso, la dirección IP `192.168.1.1` sería la dirección IP asignada al dispositivo que se conecta a la red.
+
+En resumen, una dirección IPv4 con máscara /24 se refiere a una dirección IP que se ha dividido en dos partes: la parte de red y la parte de host, y que se utiliza para identificar la red a la que pertenece la dirección IP."
+repeat_penalty;repeat_penalty;1.0;2;10.69;472;54.6;243;3;False;False;True;0.313;True;"**Definición:** Una dirección IPv4 con máscara /24 es una dirección IP que se utiliza para identificar un host en una red local (LAN) o una red de área amplia (WAN).
+
+**Ejemplo:** La dirección IP 192.168.1.100 con una máscara /24 se puede escribir como 192.168.1.100/24.
+
+**Explicación:**
+
+* La dirección IP 192.168.1.100 es la dirección IP del host.
+* La máscara /24 indica que la primera 24 bits (o 167,772,160 posibilidades) de la dirección IP son utilizadas para identificar la red, mientras que los 8 bits restantes (o 256 posibilidades) se utilizan para identificar el host dentro de la red.
+
+**Ejemplo práctico:**
+
+Supongamos que tenemos una red local con la dirección IP 192.168.1.0 y una máscara /24. Las direcciones IP válidas en esta red son:
+
+* 192.168.1.1 (gateway)
+* 192.168.1.2 (host 1)
+* 192.168.1.3 (host 2)
+* ...
+* 192.168.1.254 (host 254)
+
+La dirección IP 192.168.1.100 con una máscara /24 se puede escribir como 192.168.1.100/24, lo que significa que la primera 24 bits son 192.168.1. y los 8 bits restantes son 100. En este caso, la dirección IP 192.168.1.100 se utiliza para identificar el host 100 dentro de la red.
+
+**Resumen:**
+
+* La dirección IP 192.168.1.100 con una máscara /24 se utiliza para identificar un host en una red local.
+* La primera 24 bits (192.168.1.) se utilizan para identificar la red, mientras que los 8 bits restantes (100) se utilizan para identificar el host.
+* La dirección IP válida en esta red es 192.168.1.100/24."
+repeat_penalty;repeat_penalty;1.0;3;9.5;464;62.2;276;3;False;False;True;0.333;True;"**Definición:** Una dirección IPv4 con máscara /24 es una dirección IP de 32 bits dividida en dos partes: una parte de red y una parte de host. La parte de red se representa mediante una máscara de 24 bits, mientras que la parte de host se representa mediante 8 bits (o 256 posibilidades).
+
+**Ejemplo:** La dirección IP 192.168.1.100 con máscara /24 se puede representar de la siguiente manera:
+
+* Parte de red: 192.168.1.0 (24 bits)
+* Parte de host: 100 (8 bits)
+
+En este caso, la dirección IP 192.168.1.100 se puede dividir en dos partes:
+* La parte de red (192.168.1.0) se utiliza para identificar la red a la que pertenece la dirección IP.
+* La parte de host (100) se utiliza para identificar el dispositivo específico dentro de la red que está asignada a la dirección IP.
+
+**Consecuencias:** La máscara /24 significa que hay 256 direcciones IP posibles en la red (2^8). Sin embargo, solo 254 de estas direcciones están asignadas a dispositivos reales, ya que 2 de las direcciones están reservadas para el broadcast y el anuncio de la red.
+
+**Ejemplo práctico:** En una red con una dirección IP de 192.168.1.0/24, los dispositivos pueden tener direcciones IP como:
+
+* 192.168.1.1 (gateway)
+* 192.168.1.2 (dispositivo 1)
+* 192.168.1.3 (dispositivo 2)
+* ...
+* 192.168.1.254 (último dispositivo en la red)
+
+En resumen, una dirección IPv4 con máscara /24 es una forma de dividir una dirección IP en dos partes: una parte de red y una parte de host, lo que permite identificar la red a la que pertenece la dirección IP y el dispositivo específico dentro de la red que está asignada a la dirección IP."
+repeat_penalty;repeat_penalty;1.1;1;10.69;545;63.2;277;3;False;False;False;0.365;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits (octeto) y una máscara de red 8 bits (octeto). La máscara indica qué parte de la dirección IP corresponde a la red y qué parte corresponde al host.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 podría ser `192.168.1.100/24`.
+
+**Explicación:**
+
+* La primera 8 bits (`192.168.1`) corresponden a la dirección de la red.
+* Las últimas 24 bits (`100`) corresponden al host.
+
+En este caso, el número total de direcciones IP posibles en una subred con máscara /24 es `2^32 - 2 = 16.777.216`. Esto se calcula como sigue:
+
+`2^32 = 4.294.967.296`
+
+Restar 2 se debe a que dos direcciones son especiales y no se utilizan: la dirección de red (`192.168.1.0`) y la dirección de broadcast (`192.168.1.255`).
+
+**Ejemplo con direcciones IP**
+
+Supongamos que tenemos una subred con dirección `192.168.1.0/24`. Las direcciones IP posibles en esta subred serían:
+
+* Dirección de red: `192.168.1.0`
+* Dirección de broadcast: `192.168.1.255`
+
+Las direcciones IP restantes se pueden calcular sumando 1 a la dirección de red y restándole 1 a la dirección de broadcast, hasta llegar al número total de direcciones posibles (`16.777.216`).
+
+**Ejemplo con direcciones IP**
+
+Aquí hay algunas direcciones IP en la subred `192.168.1.0/24`:
+
+* `192.168.1.1`
+* `192.168.1.2`
+* ...
+* `192.168.1.15`
+
+Y las últimas 16 direcciones son:
+
+* `192.168.1.16`
+* `192.168.1.17`
+* ...
+* `192.168.1.31`
+
+**En resumen:** Una dirección IPv4 con máscara /24 es una combinación de la dirección IP y la máscara que indica qué parte corresponde a la red y qué parte corresponde al host. Esto permite dividir una subred en múltiples redes y hostear direcciones IP específicas dentro de cada red."
+repeat_penalty;repeat_penalty;1.1;2;12.29;566;55.3;314;2;True;False;False;0.344;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP 32 bits (octeto) y una máscara de red 8 bits (octeto). La máscara se utiliza para separar la parte de red de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 es `192.168.1.100/24`.
+
+**Explicación:**
+
+* La primera 3 partes (`192.168.1`) son la dirección de red, que identifica a la red a la que pertenece el equipo.
+* El octeto cuarto (`100`) es la parte de host, que identifica al equipo específico dentro de la red.
+
+**Máscara /24:**
+
+* La máscara `/24` se utiliza para indicar que los primeros 24 bits (o 3 octetos) de la dirección IP son parte de la red.
+* En el ejemplo anterior, la máscara `/24` significa que solo se consideran los primeros 3 octetos (`192.168.1`) como parte de la red.
+
+**Consecuencias:**
+
+* La dirección `192.168.1.100/24` indica que el equipo pertenece a la red con dirección `192.168.1.x`, y que su dirección IP es `192.168.1.100`.
+* La máscara `/24` permite identificar al menos 256 direcciones IP diferentes dentro de la misma red (2^8 - 2).
+
+**Ejemplo práctico:**
+
+Imagina una oficina con varios equipos conectados a la misma red. Cada equipo tiene una dirección IP única, pero todas pertenecen a la misma red (`192.168.1.x`). La máscara `/24` permite identificar al menos 256 direcciones IP diferentes dentro de esa red.
+
+**Pasos para configurar una dirección IPv4 con máscara /24:**
+
+1. Asigna una dirección IP a un equipo.
+2. Configura la máscara `/24` en el equipo, lo que significa asignar los primeros 3 octetos (`192.168.1`) como parte de la red.
+
+**Comandos para configurar una dirección IPv4 con máscara /24:**
+
+* En Windows: `ipconfig /all`, luego seleccionar la interfaz y editar la dirección IP y la máscara.
+* En Linux: `sudo ip addr add 192.168.1.100/24 dev eth0` (donde `eth0` es el nombre de la interfaz)."
+repeat_penalty;repeat_penalty;1.1;3;7.21;319;61.9;186;3;False;False;True;0.403;True;"**Definición:** Una dirección IPv4 con máscara /24 es una combinación de una dirección IP de 32 bits (o 4 octetos) y una máscara de red de 24 bits. La máscara se utiliza para separar la parte de red de la parte de host en una dirección IP.
+
+**Ejemplo:** Una dirección IPv4 con máscara /24 podría ser `192.168.1.100/24`.
+
+En este ejemplo, el número `192.168.1.100` es la dirección IP del host, y `/24` indica que la parte de red es `192.168.1.0`, y la parte de host es desde `192.168.1.1` hasta `192.168.1.254`.
+
+**Importancia:** La máscara /24 se utiliza comúnmente para dividir una red en subredes, donde cada subred tiene su propia dirección IP de gateway y dirección IP privada.
+
+**Cálculo de direcciones IP disponibles:**
+
+* Con una máscara /24, hay 256 direcciones IP posibles en la subred (2^8).
+* Sin embargo, solo se utilizan 254 direcciones IP (excepto las dos que se reservan para el gateway y el broadcast).
+
+**Resumen:** Una dirección IPv4 con máscara /24 es una forma de dividir una red en subredes, donde cada subred tiene su propia dirección IP de gateway y dirección IP privada."
+repeat_penalty;repeat_penalty;1.3;1;7.94;380;64.5;225;2;False;False;False;0.484;True;"**Definición:** Una dirección IP de 32 bits se divide en dos partes: la parte de red y la parte del host. La cantidad de direcciones disponibles depende de esta división.
+
+La **máscara o prefijo**, por ejemplo, `/24`, indica cuántos bytes (o octetos) son utilizados para definir el espacio de dirección IP que corresponde a una partición específica dentro de la red. En este caso se utiliza un / 32 -/24 = 8 bits.
+
+**Ejemplo:** Si tenemos una dirección IPv4 con máscara `/24` como `192.168.1.100`, esto significa:
+
+*   La parte de red es: `192.168.1`
+*   El espacio restante (parte del host) se define por los 8 bits que quedan (`00,11,...255`). En este caso el valor sería `0`.
+
+**Consecuencias:** Esta partición divide la dirección en dos partes:
+
+- La parte de red es una dirección estática y no cambia.
+- El espacio restante (parte del host) puede variar. Por ejemplo: 192.168.1.101, 192.168.1.102,... hasta `255`.
+
+**Ejemplo práctico:** Si en la LAN se asignan direcciones IP de forma dinámica usando DHCP y una máscara `/24`, el equipo con dirección IP `192.168.1.100` no puede comunicarse directamente con otro dispositivo que tenga la misma dirección, ya que su espacio del host es diferente.
+
+**Conclusión:** La particionamiento en dos partes (parte de red y parte del host) permite una mayor eficiencia en el uso de direcciones IP dentro de un mismo rango."
+repeat_penalty;repeat_penalty;1.3;2;7.79;390;68.0;228;2;False;False;True;0.522;True;"**Definición:** Una dirección IP de clase A no es relevante aquí. La forma más utilizada en la práctica actual para describir direcciones IP está dada por la notación ""dirección/prefijo"". En este caso, se trata del prefijo `/32` y una red específica.
+
+Una **directiva** como esta se usa comúnmente cuando hablamos de redes privadas. La forma más utilizada en Chile es con un formato `192.168.x.y/24`, donde:
+
+*   Se indica la dirección IP (en este caso, 192.168)
+*   El prefijo `/` separa al número a partir del cual se calculan los posibles direcciones de red y host.
+*   La parte que sigue es el valor numérico (`32`) indicando cuántas bits están reservados para la dirección IP (en este caso, todos 32 bits).
+*   El resto indica una subred específica.
+
+**Ejemplo:** `192.168.x.y/24` significa:
+
+1.  La red se encuentra en el rango de direcciones privadas (`10`, `172`, o `192.168`)
+2.  Se asignan los primeros **32 bits (4 octetos)** a la dirección IP.
+3.  Los últimos **8 bits** son utilizados para identificar una subred específica.
+
+En este caso, se trata de un rango muy amplio (`255.255.0.0`) que incluye muchas direcciones posibles: `192.168.x.y` con x = 1 a 254 (una gran cantidad).
+
+Un ejemplo práctico es la red local de una oficina en el campus universitario, donde se asignan IP públicas para Internet y redes internas (`10`, por ejemplo) o privadas como las mencionamos."
+repeat_penalty;repeat_penalty;1.3;3;8.91;464;67.8;279;2;False;False;False;0.441;True;"**Definición:** Una dirección IP de 32 bits (o octeto) escritos como cuatro números enteros entre 0 y 255 se divide en dos partes: la parte de red (la primera tres cuadras o los primeros 8 dígitos, no incluyendo el punto decimal que separa las cuadrículas), y la parte del host. La máscara /24 es una forma sencilla para expresar esta división.
+
+**Ejemplo:** Si tenemos una dirección IP de ejemplo: `192.168.1.x`, donde x puede ser cualquier número entre 0 y 255, podemos aplicar un prefijo `/24` a la parte de red (la primera tres cuadras). Esto nos da:
+
+*   Parte de red (`first three octets o first eight digits`) = `192.168`
+*   Máscara /24 para esta dirección IP: `255.255.0.0`
+
+**Ejemplo con una casa:** Si la parte de red es como el número exterior del departamento, y los tres números restantes son como las direcciones interiores dentro del mismo (por ejemplo 1-3), entonces podríamos decir que:
+
+*   La dirección IP `192.168.1.x` se corresponde a un rango de números exteriores (`x = 0`, `255`) en la calle.
+*   El número exterior es el departamento donde vivimos, y los tres primeros dígitos son las direcciones interiores dentro del mismo (por ejemplo: casa A).
+
+**Consecuencias:** La máscara /24 significa que solo hay dos posibilidades para cada una de estas 8 cuadrículas. Si la IP es `192.168.x.y`, entonces:
+
+*   El primer número (`x`) debe ser igual a cero (0) o un valor entre los números enteros del uno al trescientos, inclusive.
+*   Los dos últimos números (`y`), deben ser 00.
+
+Esto significa que la IP se puede escribir como `192.168.x/24`, donde x es el número de host en una red con máscara /25 (8 cuadrículas)."
